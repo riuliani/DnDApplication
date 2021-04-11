@@ -112,38 +112,50 @@ namespace DndApplication
                 {
                     lariesHealthTxt.Text = combat.UpdateHealthAfterDamage();
                     lariesHealthTxt.Text = combat.UpdateHealthAfterHealing();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterDamage();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterHealing();
                 }
                 else if (targetedPlayerTxt.Text == "Baubles")
                 {
                     baublesHealthTxt.Text = combat.UpdateHealthAfterDamage();
                     baublesHealthTxt.Text = combat.UpdateHealthAfterHealing();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterDamage();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterHealing();
                 }
                 else if (targetedPlayerTxt.Text == "Phao")
                 {
                     phaosHealthTxt.Text = combat.UpdateHealthAfterDamage();
                     phaosHealthTxt.Text = combat.UpdateHealthAfterHealing();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterDamage();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterHealing();
                 }
                 else if (targetedPlayerTxt.Text == "Drayden")
                 {
                     draydensHealthTxt.Text = combat.UpdateHealthAfterDamage();
                     draydensHealthTxt.Text = combat.UpdateHealthAfterHealing();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterDamage();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterHealing();
                 }
                 else if (targetedPlayerTxt.Text == "Rage-ar")
                 {
                     ragearsHelathTxt.Text = combat.UpdateHealthAfterDamage();
                     ragearsHelathTxt.Text = combat.UpdateHealthAfterHealing();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterDamage();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterHealing();
                 }
                 else if(targetedPlayerTxt.Text == "Luna")
                 {
                     lunasHealthTxt.Text = combat.UpdateHealthAfterDamage();
                     lunasHealthTxt.Text = combat.UpdateHealthAfterHealing();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterDamage();
+                    targetedPlayerHealthTxt.Text = combat.UpdateHealthAfterHealing();
                 }
                 else
                 {
                     dmgDoneToEveryoneTxt.Text = targetedPlayerTxt.Text;
                 }
 
-                DataAccess.InsertToDatabase(combat);               
+                DataAccess.InsertToDatabase(combat);
             }
 
             enemies = DataAccess.GetEnemiesDamage();
@@ -189,7 +201,7 @@ namespace DndApplication
         
         //Update Dashobard Button
         private void updateDashoBoard_Click(object sender, EventArgs e)
-        {           
+        {
 
             enemies = DataAccess.GetEnemiesDamage();
             healing = DataAccess.GetFriendlyHealing();
